@@ -35,6 +35,9 @@ public class Mob : Creature
                 Movement();
                 //Attack();
             }
+            else{
+                Patrol();
+            }
             
             
             
@@ -116,7 +119,7 @@ public class Mob : Creature
         }
     }
     public bool RandomDestination(out Vector3 result){
-        //get a random point aroudn agent
+        //get a random point around agent
         float range = 10.0f;
         Vector3 center = this.transform.position;
         for (int i = 0; i < 30; i++)

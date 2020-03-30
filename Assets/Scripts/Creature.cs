@@ -27,9 +27,9 @@ public abstract class Creature : MonoBehaviour
     public virtual void Awake(){
         alive = true;
         spawnables = GameObject.Find("Spawnables");
-        spells = spawnables.GetComponent<Spawnable>().Spells;
+        //spells = spawnables.GetComponent<Spawnable>().Spells;
         rb = this.GetComponent<Rigidbody>();
-        _animator = GetComponent<Animator>();
+        _animator = this.GetComponent<Animator>();
     }
     // Start is called before the first frame update
 
@@ -40,9 +40,15 @@ public abstract class Creature : MonoBehaviour
         if(health < 0){
             alive = false;
             _animator.SetTrigger("Death");
+            Die();
         }
     }
 
+    public virtual void Die(){
+        Debug.Log(this.gameObject.name + "  is dead");
+        this.gameObject.SetActive(false);
+        
+    }
     public abstract void Attack();
 
     public abstract void Flinch();

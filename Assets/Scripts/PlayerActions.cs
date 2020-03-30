@@ -49,17 +49,20 @@ public class PlayerActions : PlayerActionSet
 	{
 		var actions = new PlayerActions();
 
-		actions.ActionTop.AddDefaultBinding( Key.A );
-		actions.ActionLeft.AddDefaultBinding( Key.S );
-		actions.ActionRight.AddDefaultBinding( Key.D );
-		actions.ActionBottom.AddDefaultBinding( Key.F );
+		actions.ActionTop.AddDefaultBinding( Key.Key1 );
+		actions.ActionLeft.AddDefaultBinding( Key.Key2 );
+		actions.ActionRight.AddDefaultBinding( Key.Key3 );
+		actions.ActionBottom.AddDefaultBinding( Key.Key4 );
 
-		actions.LUp.AddDefaultBinding( Key.UpArrow );
-		actions.LDown.AddDefaultBinding( Key.DownArrow );
-		actions.LLeft.AddDefaultBinding( Key.LeftArrow );
-		actions.LRight.AddDefaultBinding( Key.RightArrow );
+		actions.LUp.AddDefaultBinding( Key.W );
+		actions.LDown.AddDefaultBinding( Key.S );
+		actions.LLeft.AddDefaultBinding( Key.A );
+		actions.LRight.AddDefaultBinding( Key.D );
 
 		//actions.Mouse.AddDefaultBinding(Mouse);
+		actions.LTrigger.AddDefaultBinding(InControl.Mouse.LeftButton);
+		actions.RTrigger.AddDefaultBinding(InControl.Mouse.RightButton);
+
 		return actions;
 	}
 

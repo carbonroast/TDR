@@ -22,8 +22,8 @@ public class Player : Creature
 
     void OnEnable()
     {
-        //Actions = PlayerActions.CreateWithKeyboardBindings();
-        Actions = PlayerActions.CreateWithJoystickBindings();
+        Actions = PlayerActions.CreateWithKeyboardBindings();
+        //Actions = PlayerActions.CreateWithJoystickBindings();
         //keyboardListener = PlayerActions.CreateWithKeyboardBindings();
         //joystickListener = PlayerActions.CreateWithJoystickBindings();
     }
